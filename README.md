@@ -249,5 +249,4 @@ Progres & keputusan desain: [`DEVLOG.md`](DEVLOG.md) (Bahasa Indonesia).
 ## Lisensi
 
 MIT — lihat [`LICENSE`](LICENSE). Engine memuat kode upstream OpenHarness
-(MIT, © OpenHarness Contributors); lapisan produk terinspirasi nanobot
-(MIT, © Xubin Ren dkk).
+(MIT, © OpenHarness Contributors);
