@@ -216,7 +216,6 @@ Dockerfile / docker-compose.yml / pha.spec   distribusi
 ```
 
 Engine upstream: [OpenHarness](https://github.com/openharness/openharness) ·
-inspirasi lapisan produk: [nanobot](https://github.com/nanobot/nanobot).
 Detail patch engine: [`CHANGELOG-PHA.md`](CHANGELOG-PHA.md).
 
 ## Development
