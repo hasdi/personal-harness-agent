@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8a4630"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#15803d"/>
+    </marker>
+    <marker id="arr3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#b45309"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="460" rx="18" fill="#faf9f5" stroke="#e6dfd8"/>
+
+  <text x="170" y="54" font-size="26" font-weight="700" fill="#141413">System One — lapisan keputusan cepat (opsional)</text>
+  <text x="170" y="84" font-size="17" fill="#5b5650">5 keputusan kecil diganti 1 call terstruktur ke laya-serve lokal · ~33-140 ms · $0 · data tidak keluar</text>
+
+  <rect x="60" y="150" width="190" height="76" rx="14" fill="#ffffff" stroke="#e6dfd8" stroke-width="2"/>
+  <text x="155" y="182" font-size="18" font-weight="600" fill="#141413" text-anchor="middle">Pesan masuk</text>
+  <text x="155" y="204" font-size="15" fill="#5b5650" text-anchor="middle">triage · bahaya bash ·</text>
+  <text x="155" y="222" font-size="15" fill="#5b5650" text-anchor="middle">pilih agent · judge</text>
+
+  <line x1="250" y1="188" x2="330" y2="188" stroke="#8a4630" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="336" y="128" width="252" height="120" rx="16" fill="#a9583e"/>
+  <text x="462" y="176" font-size="21" font-weight="700" fill="#ffffff" text-anchor="middle" font-family="Cascadia Mono, Consolas, monospace">laya-serve</text>
+  <text x="462" y="204" font-size="16" fill="#f5e6dc" text-anchor="middle">1 call decision terstruktur</text>
+  <text x="462" y="228" font-size="16" fill="#f5e6dc" text-anchor="middle">{choice · score · prob · conf}</text>
+
+  <line x1="588" y1="160" x2="700" y2="106" stroke="#15803d" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <line x1="588" y1="218" x2="700" y2="252" stroke="#b45309" stroke-width="2.5" marker-end="url(#arr3)"/>
+
+  <rect x="708" y="66" width="432" height="96" rx="14" fill="#e7f4ec" stroke="#15803d"/>
+  <text x="738" y="102" font-size="19" font-weight="700" fill="#15803d">conf tinggi → jawab cepat</text>
+  <text x="738" y="128" font-size="16" fill="#116635">triage dibuang, agent dipilih, jawaban dipercaya —</text>
+  <text x="738" y="150" font-size="16" fill="#116635">tanpa debat, hemat token &amp; waktu.</text>
+
+  <rect x="708" y="212" width="432" height="112" rx="14" fill="#fdf3e5" stroke="#b45309"/>
+  <text x="738" y="248" font-size="19" font-weight="700" fill="#b45309">conf rendah / timeout / mati</text>
+  <text x="738" y="274" font-size="16" fill="#8a4a08">fallback diam-diam ke jalur lama — model besar,</text>
+  <text x="738" y="296" font-size="16" fill="#8a4a08">heuristik, fnmatch. Tak pernah error ke user.</text>
+  <text x="738" y="318" font-size="14" fill="#8a4a08" font-style="italic">tercatat di trace: system_one.decision / .unavailable</text>
+
+  <rect x="60" y="330" width="560" height="94" rx="12" fill="#f3eee5" stroke="#e6dfd8"/>
+  <text x="84" y="362" font-size="16" font-weight="600" fill="#3f3a34">Enable (gateway.json):</text>
+  <text x="84" y="388" font-size="15" fill="#5b5650" font-family="Cascadia Mono, Consolas, monospace">{ "decision_enabled": true,</text>
+  <text x="84" y="410" font-size="15" fill="#5b5650" font-family="Cascadia Mono, Consolas, monospace">  "decision_base_url": "http://127.0.0.1:8001" }</text>
+</svg>
