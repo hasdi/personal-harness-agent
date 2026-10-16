@@ -29,6 +29,12 @@ Buka `http://localhost:18790/ui`. Selesai.
 
 Chat multi-sesi dengan sidebar, streaming SSE, markdown, tool chip, todo card, diff file, panel Trace/Audit — plus halaman Setup, Skills, Agents, Tools, MCP, dan Cron. Satu file HTML tanpa build step.
 
+## Cara kerja
+
+![Loop PHA — chat masuk, triage, bundle, engine, judge, balasan keluar](docs/assets/loop.png)
+
+Setiap pesan melewati loop terjaga yang sama: input chat di-triage System One (~100 ms, lokal), dibundel dengan sesi + memori, dieksekusi di engine loop ber-permission-gate, dinilai judge, lalu dikirim — dengan trace penuh di semua jalur. Keputusan lokal murah yang menjaga kedua ujung setiap run inilah pembeda harness ini.
+
 ## System One — keputusan cepat, opsional
 
 ![System One — lapisan keputusan cepat](docs/assets/system-one.png)

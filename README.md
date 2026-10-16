@@ -29,6 +29,12 @@ Open `http://localhost:18790/ui`. Done.
 
 Multi-session chat with sidebar, SSE streaming, markdown, tool chips, todo cards, file diffs, Trace/Audit panels — plus Setup, Skills, Agents, Tools, MCP, and Cron pages. A single HTML file, no build step.
 
+## How it works
+
+![The PHA loop — chat in, triage, bundle, engine, judge, reply out](docs/assets/loop.png)
+
+Every message runs the same guarded loop: chat input is triaged by System One (~100 ms, local), bundled with session + memory, executed in the permission-gated engine loop, scored by the judge, then delivered — with a full trace either way. Cheap local decisions guarding both ends of every run is what sets this harness apart.
+
 ## System One — fast decisions, optional
 
 ![System One — fast decision layer](docs/assets/system-one.png)
